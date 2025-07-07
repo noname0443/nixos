@@ -20,11 +20,23 @@
         number = true;
         relativenumber = true;
 
-        shiftwidth = 4;
 	expandtab = true;
-        softtabstop = 4;
         autoindent = true;
+        smartindent = true;
+
+        shiftwidth = 4;
+        softtabstop = 4;
+        tabstop = 4;
+
+        termguicolors = true;
       };
+
+      keymaps = [
+        {
+          key = "<C-s>";
+          action = "<cmd>w<cr><esc>";
+        }
+      ];
 
       extraPackages = with pkgs; [
         lua-language-server
