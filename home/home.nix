@@ -20,7 +20,8 @@
         number = true;
         relativenumber = true;
 
-	expandtab = true;
+	   
+      expandtab = true;
         autoindent = true;
         smartindent = true;
 
@@ -40,7 +41,7 @@
 
       extraPackages = with pkgs; [
         lua-language-server
-	gopls
+	    gopls
         stylua
         ripgrep
         go
@@ -67,7 +68,7 @@
             "<Esc>" = "close";
             "<C-d>" = "cmp.mapping.scroll_docs(-4)";
             "<C-f>" = "cmp.mapping.scroll_docs(4)";
-            "<C-Space>" = "cmp.mapping.complete()";
+            "<C-Space>" = "cmp.mapping.complete({ select = true })";
           };
           autoEnableSources = true;
           sources = [
@@ -83,6 +84,8 @@
           ];
 	};
       };
+
+      clipboard.providers.wl-copy.enable = true;
 
       plugins.cmp-nvim-lsp.enable = true;
       plugins.cmp-buffer.enable = true;
