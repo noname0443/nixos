@@ -27,6 +27,7 @@
       extraPackages = with pkgs; [
         lua-language-server
 	    gopls
+	    gofumpt
         stylua
         ripgrep
         go

@@ -3,7 +3,7 @@
   users.users.eugene = {
     isNormalUser = true;
     description = "Eugene";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "incus-admin" "incus" ];
   };
 
   home-manager.users.eugene = { pkgs, nixvim, ... }: {
