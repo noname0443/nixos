@@ -96,6 +96,9 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   environment.systemPackages = with pkgs; [
+    obsidian
+    rclone
+
     vim
     wget
     kitty

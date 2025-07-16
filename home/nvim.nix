@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
- programs.nixvim = {
+  catppuccin.enable = true;
+  programs.nixvim = {
       opts = {
         number = true;
         relativenumber = true;
@@ -124,5 +125,9 @@
         enable = true;
         ensureInstalled = [ "go" "gomod" "gowork" "gosum" ];
       };
+
+      extraPlugins = with pkgs.vimPlugins; [
+        catppuccin-nvim
+      ];
     }; 
 }
