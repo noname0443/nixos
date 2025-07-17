@@ -3,8 +3,8 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./home
-      ./work
+      ./homenix
+      ./worknix
       ./hardware/nvidia.nix
     ];
 
@@ -115,6 +115,7 @@
     overskride
     hyprlock
     unzip
+    python3
 
     # Specific packages
     # TODO: split into separate module

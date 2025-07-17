@@ -17,7 +17,7 @@
     cool-retro-term
 
     starship
-    helix
+    waybar
 
     qutebrowser
     zathura
