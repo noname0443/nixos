@@ -125,6 +125,7 @@
     gcc
     gnumake
   ];
+
   environment.variables.EDITOR = "nvim";
 
   system.stateVersion = "25.05";

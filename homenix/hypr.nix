@@ -18,6 +18,7 @@
 
     starship
     waybar
+    dunst
 
     qutebrowser
     zathura

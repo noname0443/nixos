@@ -4,5 +4,6 @@
     ./hypr.nix
     ./tmux.nix
     ./nvim.nix
+    ./fonts.nix
   ];
 }
