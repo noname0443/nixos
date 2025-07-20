@@ -19,6 +19,7 @@
     starship
     waybar
     dunst
+    libnotify
 
     qutebrowser
     zathura

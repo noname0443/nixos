@@ -8,13 +8,24 @@
       ./hardware/nvidia.nix
     ];
 
+  networking.firewall.enable = false;
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = "nixos";
   networking.networkmanager.enable = true;
 
+  networking.nameservers = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+  services.resolved = {
+    enable = true;
+    domains = [ "~." ];
+    fallbackDns = [ "1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one" ];
+  };
+
   time.timeZone = "Europe/Moscow";
+  services.timesyncd.enable = true;
+  time.hardwareClockInLocalTime = false;
 
   i18n.defaultLocale = "en_GB.UTF-8";
   i18n.extraLocaleSettings = {
@@ -77,7 +88,7 @@
     enable = true;
     remotePlay.openFirewall = true;
     dedicatedServer.openFirewall = true;
-  }; 
+  };
   programs.nekoray = {
     enable = true;
     tunMode = {
@@ -109,6 +120,7 @@
     telegram-desktop
     google-chrome
     discord-ptb
+    discord
     grim
     slurp
     wl-clipboard
@@ -116,6 +128,7 @@
     hyprlock
     unzip
     python3
+    btop
 
     # Specific packages
     # TODO: split into separate module

@@ -151,6 +151,15 @@ window.top_bar .modules-center {
   color: @sapphire;
 }
 
+#rclone {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 15;
+  padding-left: 15;
+  padding-right: 15;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
 #network {
   background-color: alpha(@surface1, 0.7);
   border-radius: 15;
