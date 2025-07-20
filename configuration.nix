@@ -129,6 +129,7 @@
     unzip
     python3
     btop
+    gimp
 
     # Specific packages
     # TODO: split into separate module

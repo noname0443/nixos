@@ -106,6 +106,13 @@
         },
     },
 
+    "custom/randpaper": {
+      "format": "󰑓",
+      "tooltip": "Random wallpaper",
+      "on-click": "bash ~/.config/waybar/scripts/rand-paper.sh",
+      "interval": 0,
+    },
+
     "custom/media": {
         "format": "{icon}󰎈",
         "restart-interval": 2,
@@ -129,7 +136,6 @@
       "tooltip": "Rclone Sync",
       "on-click": "bash ~/.config/waybar/scripts/rclone-popup.sh",
       "interval": 0,
-      "class": "rclone",
     },
 
     "bluetooth": {
@@ -167,6 +173,7 @@
     "group/misc": {
         "orientation": "horizontal",
         "modules": [
+            "custom/randpaper",
             "custom/webcam",
             "privacy",
             "custom/recording",
