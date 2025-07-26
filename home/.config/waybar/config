@@ -10,7 +10,7 @@
     "spacing": 4, // Gaps between modules (4px)
     "modules-left": ["hyprland/workspaces", "hyprland/submap"],
     "modules-center": ["clock#time", "custom/separator", "clock#week", "custom/separator_dot", "clock#month", "custom/separator", "clock#calendar"],
-    "modules-right": [ "bluetooth", "network", "group/misc", "custom/logout_menu" ],
+    "modules-right": [ "bluetooth", "network", "group/misc", "custom/logout_menu" ], 
 
     // Modules Config
     "hyprland/workspaces": {
@@ -138,6 +138,16 @@
       "interval": 0,
     },
 
+    "custom/pomodoro": {
+      "format": "{}",
+      "class": "rclone",
+      "interval": 1,
+      "return-type": "json",
+      "exec": "~/.config/waybar/scripts/pomo/pomo_render.sh",
+      "on-click": "~/.config/waybar/scripts/pomo/pomo.sh toggle",
+      "on-click-right": "~/.config/waybar/scripts/pomo/pomo.sh reset",
+    },
+
     "bluetooth": {
         "format": "󰂯",
         "format-disabled": "󰂲",
@@ -173,12 +183,13 @@
     "group/misc": {
         "orientation": "horizontal",
         "modules": [
-            "custom/randpaper",
             "custom/webcam",
             "privacy",
             "custom/recording",
             "custom/geo",
             "custom/media",
+            "custom/randpaper",
+            "custom/pomodoro",
             "custom/rclone",
             "custom/dunst",
             "custom/night_mode",

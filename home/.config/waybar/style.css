@@ -151,7 +151,23 @@ window.top_bar .modules-center {
   color: @sapphire;
 }
 
-#rclone {
+#misc {
+  padding: 2px 8px;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.08);
+  margin: 0 2px;
+}
+
+#custom-randpaper {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 15;
+  padding-left: 15;
+  padding-right: 15;
+  margin-top: 5;
+  margin-bottom: 5;
+}
+
+#custom-rclone {
   background-color: alpha(@surface1, 0.7);
   border-radius: 15;
   padding-left: 15;
@@ -449,4 +465,26 @@ window.left_bar .modules-center {
 
 #systemd-failed-units {
   color: @red;
+}
+
+#custom-pomodoro {
+  color: gray;
+}
+
+#custom-pomodoro.done {
+  color: red;
+  font-weight: bold;
+}
+
+#custom-pomodoro.paused {
+  color: orange;
+}
+
+#custom-pomodoro {
+  background-color: alpha(@surface1, 0.7);
+  border-radius: 15;
+  padding-left: 15;
+  padding-right: 15;
+  margin-top: 5;
+  margin-bottom: 5;
 }
