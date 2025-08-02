@@ -24,9 +24,9 @@ WOFI_PID=$!
 
 # Run the actual rclone sync (block until done)
 if [ "$CHOICE" = "Push" ]; then
-  rclone sync ~/Sync yandex_enc: && rclone sync ~/Sync google_enc: && RESULT=0 || RESULT=1
+  rclone sync ~/Sync google_enc: && RESULT=0 || RESULT=1
 elif [ "$CHOICE" = "Pull" ]; then
-  rclone sync yandex_enc: ~/Sync && RESULT=0 || (rclone sync google_enc: ~/Sync && RESULT=0 || RESULT=1)
+  rclone sync google_enc: ~/Sync && RESULT=0 || RESULT=1
 else
   kill "$WOFI_PID"
   exit 1
