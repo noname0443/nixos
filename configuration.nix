@@ -127,8 +127,7 @@
     gimp
     fd
     keepassxc
-    gocryptfs
-    davfs2
+    syncthing
 
     # Specific packages
     # TODO: split into separate module
