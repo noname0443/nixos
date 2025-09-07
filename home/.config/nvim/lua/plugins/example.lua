@@ -72,6 +72,10 @@ return {
       servers = {
         -- pyright will be automatically installed with mason and loaded with lspconfig
         pyright = {},
+        qmlls = {
+          cmd = { "qmlls" },
+          settings = { Qml = { } },
+        },
       },
     },
   },
@@ -121,6 +125,8 @@ return {
         "javascript",
         "json",
         "lua",
+        "qml",
+        "qmljs",
         "markdown",
         "markdown_inline",
         "python",
@@ -146,6 +152,27 @@ return {
     end,
   },
 
+  {
+    "stevearc/conform.nvim",
+    opts = {
+      formatters_by_ft = {
+        qml = { "qmlformat" },
+      },
+      formatters = {
+        qmlformat = {
+          command = "qmlformat",
+          -- Option A: format via stdin (works on most builds)
+          -- stdin = true,
+
+          -- Option B: in-place formatting if your qmlformat needs -i
+          stdin = false,
+          args = { "-i", "$FILENAME" },
+          require_cwd = false,
+        },
+      },
+    },
+  },
+
   -- add any tools you want to have installed below
   {
     "williamboman/mason.nvim",
@@ -155,6 +182,7 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "qmlls",
       },
     },
   },

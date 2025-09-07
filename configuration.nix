@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   imports =
     [
@@ -128,6 +128,14 @@
     fd
     keepassxc
     syncthing
+    wireplumber
+    qbittorrent
+    prismlauncher
+
+    inputs.quickshell.packages.${pkgs.system}.default
+
+    qt6.qtdeclarative
+    qt6.qttools
 
     # Specific packages
     # TODO: split into separate module
@@ -138,7 +146,10 @@
     gnumake
   ];
 
-  environment.variables.EDITOR = "nvim";
+  environment.variables = {
+    EDITOR = "nvim";
+    QMLLS_BUILD_DIRS = "${inputs.quickshell.packages.${pkgs.system}.default}/lib/qt-6/qml:${pkgs.qt6.qtdeclarative}/lib/qt-6/qml";
+  };
 
   system.stateVersion = "25.05";
 }
