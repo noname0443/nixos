@@ -65,6 +65,9 @@
       "ru.linux_gaming.PortProton"
     ];
   };
+  xdg.mime.defaultApplications = {
+    "video/mp4" = "vlc";
+  };
 
   programs.firefox.enable = true;
   programs.hyprland.enable = true;
@@ -131,6 +134,8 @@
     wireplumber
     qbittorrent
     prismlauncher
+    vlc
+    ranger
 
     inputs.quickshell.packages.${pkgs.system}.default
 
