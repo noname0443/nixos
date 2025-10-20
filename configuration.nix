@@ -137,6 +137,7 @@
     vlc
     ranger
 
+    nodejs
     inputs.quickshell.packages.${pkgs.system}.default
 
     qt6.qtdeclarative
